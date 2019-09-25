@@ -3,6 +3,7 @@
   "verbose": true,
   "requireCleanWorkingDir": false,
   "git": {
+    "requireCleanWorkingDir": false,
     "requireUpstream": false,
     "tagName": "v%s",
     "commitMessage": "chore(release): publish %s\n\n[skip publish]",
