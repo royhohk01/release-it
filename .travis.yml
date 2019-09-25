@@ -24,7 +24,7 @@ script: |-
     export ENVIRONMENT="staging"
   fi
 
-  export IMAGE_INSTALLER=myimage
+  export IMAGE_INSTALLER=installer
 
   docker build -t ${IMAGE_INSTALLER} \
     --target installer \
