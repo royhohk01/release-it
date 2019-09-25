@@ -34,7 +34,7 @@ script: |-
 deploy:
 # Update release version
 - provider: script
-  script: docker run --rm -v /home/travis/.ssh/id_rsa:/root/.ssh/id_rsa -v ${PWD}/.git:/dir/.git $IMAGE_INSTALLER bash -c "yarn && git config user.email 'builds@travis-ci.org' && git config user.name 'Travis CI' && git checkout -B ${TRAVIS_BRANCH} && yarn release"
+  script: docker run --rm -v /home/travis/.ssh/id_rsa:/root/.ssh/id_rsa -v ${PWD}/.git:/dir/.git -e GITHUB_TOKEN=${CI_GITHUB_TOKEN} $IMAGE_INSTALLER bash -c "yarn && git config user.email 'builds@travis-ci.org' && git config user.name 'Travis CI' && git checkout -B ${TRAVIS_BRANCH} && yarn release"
   on:
     branch:
       - master
