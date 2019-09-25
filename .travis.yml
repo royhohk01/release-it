@@ -47,4 +47,5 @@ deploy:
       && yarn release"
   on:
     branch:
+      - fix/release-it
       - master
