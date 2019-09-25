@@ -1,0 +1,25 @@
+{
+  "non-interactive": true,
+  "verbose": true,
+  "requireCleanWorkingDir": false,
+  "git": {
+    "requireUpstream": false,
+    "tagName": "v%s",
+    "commitMessage": "chore(release): publish %s\n\n[skip publish]",
+    "commitArgs": "--no-verify"
+  },
+  "github": {
+    "release": true,
+    "releaseName": "%s Released",
+    "draft": false
+  },
+  "npm": {
+    "publish": false,
+    "access": null
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": "angular"
+    }
+  }
+}
